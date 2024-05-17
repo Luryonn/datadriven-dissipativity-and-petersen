@@ -1,0 +1,17 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: datadriven-dissipativity-and-petersen
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: João Gabriel
+    family-names: Napoleão Silva
+    email: joao.gns97@gmail.com
+    name-particle: JOAO
+    affiliation: UFC
+repository-code: >-
+  https://github.com/Luryonn/datadriven-dissipativity-and-petersen
