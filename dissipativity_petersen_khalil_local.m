@@ -112,6 +112,7 @@ prog = sosprogram(vars);
 [prog, L] = sospolyvar(prog,[monomials(x,2:4)],'wscoeff');
 
 % SOS constrains
+prog = sosineq(prog,L-1e-6*(x1^2+x2^2));
 gradV = [diff(V,x1); diff(V,x2)]; % gradient of Lyapunov function
 
 Sigma1 = [gradV'*zeta_N'*Z+T-h'*Q'*h -h'*S+(1/2)*gradV'*zeta_M'*W
@@ -176,6 +177,7 @@ else
         prog = sosineq(prog,delta_increasing);
 
         prog = sosineq(prog,lambda-epsi); % petersen's lemma's lambda constraint
+        prog = sosineq(prog,alpha);
      
         % STEP 2 solution
         sol = sossolve(prog);
